@@ -1,4 +1,4 @@
-# PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY AY 23-24
+## PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY AY 23-24
 <h3>Sam Israel D</h3>
 <h3>212222230128</h3>
 <h3>EX. NO : 4</h3>
@@ -6,12 +6,12 @@
 <h1> <align=center> MATRIX ADDITION WITH UNIFIED MEMORY </h3>
   Refer to the program sumMatrixGPUManaged.cu. Would removing the memsets below affect performance? If you can, check performance with nvprof or nvvp.</h3>
 
-## AIM:
+### AIM:
 To perform Matrix addition with unified memory and check its performance with nvprof.
-## EQUIPMENTS REQUIRED:
+### EQUIPMENTS REQUIRED:
 Hardware – PCs with NVIDIA GPU & CUDA NVCC
 Google Colab with NVCC Compiler
-## PROCEDURE:
+### PROCEDURE:
 1.	Setup Device and Properties
 Initialize the CUDA device and get device properties.
 2.	Set Matrix Size: Define the size of the matrix based on the command-line argument or default value.
@@ -37,8 +37,8 @@ Allocate Host Memory
 21.	Reset Device and Exit
 22.	Reset the device using cudaDeviceReset and return from the main function.
 
-## PROGRAM:
-#### With Memset()
+### PROGRAM:
+##### With Memset()
 ```cuda
 %%cuda
 #include <stdio.h>
@@ -274,7 +274,7 @@ int main(int argc, char **argv)
     return (0);
 }
 ```
-#### Without Memset()
+##### Without Memset()
 ```cuda
 %%cuda
 #include <stdio.h>
@@ -511,10 +511,10 @@ int main(int argc, char **argv)
 }
 
 ```
-## OUTPUT:
-#### With Memset()
+### OUTPUT:
+##### With Memset()
 ![images](./images/s1.png)
-#### Without Memset()
+##### Without Memset()
 ![images](./images/s2.png)
-## RESULT:
+### RESULT:
 Thus the program has been executed by using unified memory. It is observed that removing memset function has given 0.0156 less time.
